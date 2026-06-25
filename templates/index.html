@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BISINDO Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+
+<body>
+
+    <div class="header">
+
+        <h1>Bahasa Isyarat BISINDO</h1>
+
+        <div class="status">
+            <span></span>
+            Kamera Aktif
+        </div>
+
+    </div>
+
+
+    <div class="container">
+
+        <div class="camera-box">
+
+            <img src="{{ url_for('video') }}" class="video">
+
+        </div>
+
+
+        <div class="panel">
+
+
+            <div class="card">
+
+                <h3>Hasil Deteksi</h3>
+
+                <h1 id="result">-</h1>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Akurasi Prediksi</h3>
+
+
+                <div class="progress">
+
+                    <div id="bar"></div>
+
+                </div>
+
+
+                <h2 id="confidence">
+                    0%
+                </h2>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
